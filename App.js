@@ -1,20 +1,19 @@
-import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import { colores, tipografia } from './src/theme/tema';
+import { CAPACIDAD_INICIAL, TARIFAS_POR_DEFECTO } from './src/config/constantes';
 
 export default function App() {
+  const total = CAPACIDAD_INICIAL.CARRO + CAPACIDAD_INICIAL.MOTO + CAPACIDAD_INICIAL.BICICLETA;
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+    <View style={styles.contenedor}>
+      <Text style={styles.titulo}>ParkApp</Text>
+      <Text>Capacidad total: {total} celdas</Text>
+      <Text>{TARIFAS_POR_DEFECTO.CARRO.valorHora}</Text>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+  contenedor: { flex: 1, backgroundColor: colores.fondo, alignItems: 'center', justifyContent: 'center' },
+  titulo: { fontSize: tipografia.grande, fontWeight: '700', color: colores.primario },
 });
