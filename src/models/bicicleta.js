@@ -3,10 +3,10 @@
  * código interno o se usa el serial del marco.
  * Además REDEFINE (override) descripcion() para mostrar otro texto.
  */
-import Vehiculo from './Vehiculo';
+import vehiculos from './Vehiculos';
 import { TIPOS_VEHICULO } from '../config/constantes';
 
-export default class Bicicleta extends Vehiculo {
+export default class Bicicleta extends vehiculos {
   constructor(codigo) {
     super(codigo, TIPOS_VEHICULO.BICICLETA);
   }

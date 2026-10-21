@@ -6,10 +6,10 @@
  * lo que lo hace diferente: su formato de placa y su icono.
  */
 
-import Vehiculo from './Vehiculo';
+import Vehiculos from './Vehiculos';
 import { TIPOS_VEHICULO } from '../config/constantes';
 
-export default class Carro extends Vehiculo {
+export default class Carro extends Vehiculos {
   constructor(placa) {
     // super(...) llama al constructor de la superclase (Vehiculo).
     // Es OBLIGATORIO llamarlo antes de usar "this".

@@ -1,19 +1,27 @@
-import { StyleSheet, Text, View } from 'react-native';
-import { colores, tipografia } from './src/theme/tema';
-import { CAPACIDAD_INICIAL, TARIFAS_POR_DEFECTO } from './src/config/constantes';
+// App.js (prueba temporal de la Fase 4)
+
+import { ScrollView, Text } from 'react-native';
+import { crearVehiculo } from './src/models/fabricaVehiculos';
+
+const pruebas = [
+  ['CARRO', 'abc-123'],
+  ['MOTO', 'XYZ12D'],
+  ['MOTO', 'ABC123'],
+  ['BICICLETA', '___'],
+];
 
 export default function App() {
-  const total = CAPACIDAD_INICIAL.CARRO + CAPACIDAD_INICIAL.MOTO + CAPACIDAD_INICIAL.BICICLETA;
   return (
-    <View style={styles.contenedor}>
-      <Text style={styles.titulo}>ParkApp</Text>
-      <Text>Capacidad total: {total} celdas</Text>
-      <Text>{TARIFAS_POR_DEFECTO.CARRO.valorHora}</Text>
-    </View>
+    <ScrollView contentContainerStyle={{ padding: 40 }}>
+      {pruebas.map(([tipo, placa]) => {
+        const v = crearVehiculo(tipo, placa);
+        const r = v.___();
+        return (
+          <Text key={tipo + placa}>
+            {v.descripcion()} - {r.valido ? 'VÁLIDO' : r.___}
+          </Text>
+        );
+      })}
+    </ScrollView>
   );
 }
-
-const styles = StyleSheet.create({
-  contenedor: { flex: 1, backgroundColor: colores.fondo, alignItems: 'center', justifyContent: 'center' },
-  titulo: { fontSize: tipografia.grande, fontWeight: '700', color: colores.primario },
-});

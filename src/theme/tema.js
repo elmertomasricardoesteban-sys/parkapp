@@ -33,7 +33,7 @@ export const espacio = {
     xxl: 32,
 };
 
-export const tipografias ={
+export const tipografia ={
     pequeña: 12,
     normal: 15,
     subtitulo: 18,

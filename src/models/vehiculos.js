@@ -12,7 +12,7 @@
  * - Método abstracto  -> patronIdentificador() DEBE ser redefinido por cada hija.
  * - Polimorfismo      -> validar() funciona distinto según la subclase.
  */
-export default class Vehiculo {
+export default class vehiculos {
   // Atributos privados: el "#" hace que no se puedan leer ni cambiar
   // desde fuera de la clase (equivale a "private" en Java).
   #identificador;
