@@ -3,11 +3,12 @@
 import { ScrollView, Text } from 'react-native';
 import { crearVehiculo } from './src/models/fabricaVehiculos';
 
+
 const pruebas = [
   ['CARRO', 'abc-123'],
   ['MOTO', 'XYZ12D'],
   ['MOTO', 'ABC123'],
-  ['BICICLETA', '___'],
+  ['BICICLETA', 'BICI01'],
 ];
 
 export default function App() {
@@ -15,7 +16,7 @@ export default function App() {
     <ScrollView contentContainerStyle={{ padding: 40 }}>
       {pruebas.map(([tipo, placa]) => {
         const v = crearVehiculo(tipo, placa);
-        const r = v.___();
+        const r = v.validar();
         return (
           <Text key={tipo + placa}>
             {v.descripcion()} - {r.valido ? 'VÁLIDO' : r.___}

@@ -5,10 +5,10 @@
  * Esto es POLIMORFISMO: validar() es el mismo método heredado,
  * pero se comporta distinto porque patronIdentificador() cambia.
  */
-import Vehiculos from './Vehiculos';
+import vehiculo from './vehiculo';
 import { TIPOS_VEHICULO } from '../config/constantes';
 
-export default class Moto extends Vehiculos {
+export default class Moto extends vehiculo {
   constructor(placa) {
     super(placa, TIPOS_VEHICULO.MOTO);
   }
