@@ -8,7 +8,7 @@ import { TIPOS_VEHICULO } from '../config/constantes';
 /**
  * @param {string} tipo CARRO | MOTO | BICICLETA
  * @param {string} identificador placa o código
- * @returns {import('./Vehiculo').default}
+ * @returns {import('./vehiculo').default}
  */
 export function crearVehiculo(tipo, identificador) {
   switch (tipo) {

@@ -19,10 +19,11 @@ export default function App() {
         const r = v.validar();
         return (
           <Text key={tipo + placa}>
-            {v.descripcion()} - {r.valido ? 'VÁLIDO' : r.___}
+            {v.descripcion()} - {r.valido ? 'VÁLIDO' : r._____}
           </Text>
         );
       })}
     </ScrollView>
   );
 }
+
